@@ -15,7 +15,7 @@ nav {
         font-weight: 700;
         transition: .4s;
         
-        &:hover {
+        &:hover, &.actif {
             background-color: $backcolor2;
             color: #fff;
         }

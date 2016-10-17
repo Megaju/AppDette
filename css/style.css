@@ -201,7 +201,7 @@ nav {
     border-bottom: 1px solid #006564;
     font-weight: 700;
     transition: .4s; }
-    nav li:hover {
+    nav li:hover, nav li.actif {
       background-color: #999;
       color: #fff; }
   nav i {
