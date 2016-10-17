@@ -1,4 +1,30 @@
-header {
-    background-color: dodgerblue;
-    color: #fff;
+header, footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    background-color: $backcolor;
+    color: $textcolor;
+    padding: 10px;
+}
+
+footer {
+    font-weight: 700;
+    justify-content: center;
+    font-size: $fs-smart;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: $fs-medium;
+    text-align: right;
+    font-weight: bolder;
+    color: $bordercolor;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-left: 25px;
+    background-image: url(../svg/home.svg);
 }

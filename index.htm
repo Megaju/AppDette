@@ -8,13 +8,15 @@
 </head>
 <body>
     <header>
-        <h1>App Dette</h1>
+        <h1>App Dette</h1><div class="logo"></div>
     </header>
     
+    <div class="flexbox">
     <nav>
         <ul>
-            <li>Accueil</li>
-            <li>Ajouter personne</li>
+            <a href="#"><li class="actif">Accueil<i class="fa fa-home" aria-hidden="true"></i></li></a>
+            <a href="#"><li>Ajouter personne<i class="fa fa-user-plus" aria-hidden="true"></i></li></a>
+            <a href="#"><li>à propos<i class="fa fa-info-circle" aria-hidden="true"></i></li></a>
         </ul>
         
         <!--<div class="pub">
@@ -25,14 +27,19 @@
     
     <section>
         <div class="page-description">
-            <p>Retrouvez ici toutes les personnes enregistrées.</p>
+            <p>Bonjour <bold>{{ NAME }}</bold>, Retrouvez ici toutes les personnes enregistrées.</p>
         </div>
         
+        <div id="groupe1">
+        <div class="label-grp">Groupe</div>
+        <div class="flexbox">
         <!-- BLOC POUR UNE PERSONNE -->
         <div class="person">
             <p class="name">Nom prénom</p>
-            <p class="total-money-up">354$</p>
-            <p class="total-money-down">134$</p>
+            <div class="flexbox">
+            <p class="total-money-up">354 $ <i class="fa fa-arrow-up"></i></p>
+            <p class="total-money-down">134 $ <i class="fa fa-arrow-down"></i></p>
+            </div>
             <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
             <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
         </div>
@@ -40,8 +47,10 @@
         <!-- BLOC POUR UNE PERSONNE -->
         <div class="person">
             <p class="name">Nom prénom</p>
-            <p class="total-money-up">354$</p>
-            <p class="total-money-down">134$</p>
+            <div class="flexbox">
+            <p class="total-money-up">354 $ <i class="fa fa-arrow-up"></i></p>
+            <p class="total-money-down">134 $ <i class="fa fa-arrow-down"></i></p>
+            </div>
             <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
             <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
         </div>
@@ -49,8 +58,26 @@
         <!-- BLOC POUR UNE PERSONNE -->
         <div class="person">
             <p class="name">Nom prénom</p>
-            <p class="total-money-up">354$</p>
-            <p class="total-money-down">134$</p>
+            <div class="flexbox">
+            <p class="total-money-up">354 $ <i class="fa fa-arrow-up"></i></p>
+            <p class="total-money-down">134 $ <i class="fa fa-arrow-down"></i></p>
+            </div>
+            <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+            <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </div>
+        </div>
+        </div>
+        
+        <div id="groupe2">
+        <div class="label-grp">Groupe</div>
+        <div class="flexbox">
+        <!-- BLOC POUR UNE PERSONNE -->
+        <div class="person">
+            <p class="name">Nom prénom</p>
+            <div class="flexbox">
+            <p class="total-money-up">354 $ <i class="fa fa-arrow-up"></i></p>
+            <p class="total-money-down">134 $ <i class="fa fa-arrow-down"></i></p>
+            </div>
             <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
             <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
         </div>
@@ -58,8 +85,10 @@
         <!-- BLOC POUR UNE PERSONNE -->
         <div class="person">
             <p class="name">Nom prénom</p>
-            <p class="total-money-up">354$</p>
-            <p class="total-money-down">134$</p>
+            <div class="flexbox">
+            <p class="total-money-up">354 $ <i class="fa fa-arrow-up"></i></p>
+            <p class="total-money-down">134 $ <i class="fa fa-arrow-down"></i></p>
+            </div>
             <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
             <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
         </div>
@@ -67,8 +96,23 @@
         <!-- BLOC POUR UNE PERSONNE -->
         <div class="person">
             <p class="name">Nom prénom</p>
-            <p class="total-money-up">354$</p>
-            <p class="total-money-down">134$</p>
+            <div class="flexbox">
+            <p class="total-money-up">354 $ <i class="fa fa-arrow-up"></i></p>
+            <p class="total-money-down">134 $ <i class="fa fa-arrow-down"></i></p>
+            </div>
+            <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+            <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </div>
+        </div>
+        
+        <div class="flexbox">
+        <!-- BLOC POUR UNE PERSONNE -->
+        <div class="person">
+            <p class="name">Nom prénom</p>
+            <div class="flexbox">
+            <p class="total-money-up">354 $ <i class="fa fa-arrow-up"></i></p>
+            <p class="total-money-down">134 $ <i class="fa fa-arrow-down"></i></p>
+            </div>
             <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
             <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
         </div>
@@ -76,8 +120,10 @@
         <!-- BLOC POUR UNE PERSONNE -->
         <div class="person">
             <p class="name">Nom prénom</p>
-            <p class="total-money-up">354$</p>
-            <p class="total-money-down">134$</p>
+            <div class="flexbox">
+            <p class="total-money-up">354 $ <i class="fa fa-arrow-up"></i></p>
+            <p class="total-money-down">134 $ <i class="fa fa-arrow-down"></i></p>
+            </div>
             <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
             <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
         </div>
@@ -85,8 +131,26 @@
         <!-- BLOC POUR UNE PERSONNE -->
         <div class="person">
             <p class="name">Nom prénom</p>
-            <p class="total-money-up">354$</p>
-            <p class="total-money-down">134$</p>
+            <div class="flexbox">
+            <p class="total-money-up">354 $ <i class="fa fa-arrow-up"></i></p>
+            <p class="total-money-down">134 $ <i class="fa fa-arrow-down"></i></p>
+            </div>
+            <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+            <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </div>
+        </div>
+        </div>
+        
+        <div id="groupe3">
+        <div class="label-grp">Groupe</div>
+        <div class="flexbox">
+        <!-- BLOC POUR UNE PERSONNE -->
+        <div class="person">
+            <p class="name">Nom prénom</p>
+            <div class="flexbox">
+            <p class="total-money-up">354 $ <i class="fa fa-arrow-up"></i></p>
+            <p class="total-money-down">134 $ <i class="fa fa-arrow-down"></i></p>
+            </div>
             <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
             <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
         </div>
@@ -94,13 +158,52 @@
         <!-- BLOC POUR UNE PERSONNE -->
         <div class="person">
             <p class="name">Nom prénom</p>
-            <p class="total-money-up">354$</p>
-            <p class="total-money-down">134$</p>
+            <div class="flexbox">
+            <p class="total-money-up">354 $ <i class="fa fa-arrow-up"></i></p>
+            <p class="total-money-down">134 $ <i class="fa fa-arrow-down"></i></p>
+            </div>
             <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
             <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
         </div>
         
+        <!-- BLOC POUR UNE PERSONNE -->
+        <div class="person">
+            <p class="name">Nom prénom</p>
+            <div class="flexbox">
+            <p class="total-money-up">354 $ <i class="fa fa-arrow-up"></i></p>
+            <p class="total-money-down">134 $ <i class="fa fa-arrow-down"></i></p>
+            </div>
+            <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+            <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </div>
+        </div>
+        
+            <div class="flexbox">
+        <!-- BLOC POUR UNE PERSONNE -->
+        <div class="person">
+            <p class="name">Nom prénom</p>
+            <div class="flexbox">
+            <p class="total-money-up">354 $ <i class="fa fa-arrow-up"></i></p>
+            <p class="total-money-down">134 $ <i class="fa fa-arrow-down"></i></p>
+            </div>
+            <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+            <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </div>
+        
+        <!-- BLOC POUR UNE PERSONNE -->
+        <div class="person">
+            <p class="name">Nom prénom</p>
+            <div class="flexbox">
+            <p class="total-money-up">354 $ <i class="fa fa-arrow-up"></i></p>
+            <p class="total-money-down">134 $ <i class="fa fa-arrow-down"></i></p>
+            </div>
+            <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+            <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </div>
+        </div>    
+        </div>
     </section>
+    </div>
     
     <footer>
         <p><i class="fa fa-copyright" aria-hidden="true"></i>Julien Malle, 2016.</p>

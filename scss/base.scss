@@ -1,0 +1,134 @@
+body {
+    background-color: $backcolor;
+}
+
+section {
+    width: 100%;
+    padding: 25px;
+    background-color: $backcolor2;
+    background-image: url(../images/seigaiha.png);
+}
+
+.page-description {
+    margin-bottom: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+    margin-right: -25px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: $bordercolor;
+    color: $secondcolor;
+    border-bottom: 1px solid $secondcolor;
+}
+
+a {
+    text-decoration: none;
+    color: $secondcolor;
+    transition: .3s;
+    
+    &:hover {
+        color: $secondcolor-hover;
+    }
+}
+
+bold {
+    font-weight: 700;
+}
+
+/* --- style des bloc des personnes --- */
+.person {
+    position: relative;
+    width: 30%;
+    padding: 0 20px 40px 20px;
+    margin: 15px;
+    background-color: #ddd;
+    color: #222;
+    border: 1px solid #eee;
+    box-shadow: 0 0 15px #aaa;
+    
+    .name {
+        margin-top: 15px;
+        font-size: $fs-medium;
+        text-transform: capitalize;
+        font-weight: 700;
+    }
+    
+    .total-money-up, .total-money-down {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        padding: 5px 15px;
+        margin: 20px 0;
+        background-color: $backcolor;
+        color: $color-light;
+        text-align: center;
+        font-weight: 700;
+        transition: .3s;
+        cursor: pointer;
+        
+        &:hover {
+            bottom: 2px;
+            filter:brightness(110%);
+        }
+        
+        i {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
+    }
+    
+    .total-money-up {
+        margin-right: 5px;
+        background-color: $color-plus;
+        border: 1px solid $color-plus2;
+        border-bottom: 5px solid $color-plus2;
+        color: $color-plus-text;
+    }
+    
+    .total-money-down {
+        margin-left: 5px;
+        background-color: $color-moins;
+        border: 1px solid $color-moins2;
+        border-bottom: 5px solid $color-moins2;
+        color: $color-moins-text;
+    }
+    
+    .close, .link-person {
+        font-size: $fs-medium;
+    }
+    
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .link-person {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+/* --- style des groupes --- */
+[id*="groupe"] {
+    position: relative;
+    border: 1px solid $bordercolor;
+    margin: 25px 0 60px 0;
+    padding: 50px;
+}
+
+.label-grp {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 30px;
+    position: absolute;
+    top: -30px;
+    left: -1px;
+    background-color: $bordercolor;
+    color: $color-light;
+}

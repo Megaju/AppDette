@@ -46,9 +46,166 @@ table {
   border-spacing: 0; }
 
 /* --- colors --- */
-header {
-  background-color: dodgerblue;
-  color: #fff; }
+/* --- background --- */
+/* --- font-size --- */
+body {
+  background-color: whitesmoke; }
+
+section {
+  width: 100%;
+  padding: 25px;
+  background-color: #999;
+  background-image: url(../images/seigaiha.png); }
+
+.page-description {
+  margin-bottom: 50px;
+  margin-top: -25px;
+  margin-left: -25px;
+  margin-right: -25px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #006564;
+  color: #00B2AF;
+  border-bottom: 1px solid #00B2AF; }
+
+a {
+  text-decoration: none;
+  color: #00B2AF;
+  transition: .3s; }
+  a:hover {
+    color: #00FFFB; }
+
+bold {
+  font-weight: 700; }
+
+/* --- style des bloc des personnes --- */
+.person {
+  position: relative;
+  width: 30%;
+  padding: 0 20px 40px 20px;
+  margin: 15px;
+  background-color: #ddd;
+  color: #222;
+  border: 1px solid #eee;
+  box-shadow: 0 0 15px #aaa; }
+  .person .name {
+    margin-top: 15px;
+    font-size: 2em;
+    text-transform: capitalize;
+    font-weight: 700; }
+  .person .total-money-up, .person .total-money-down {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 15px;
+    margin: 20px 0;
+    background-color: whitesmoke;
+    color: #ECF0F1;
+    text-align: center;
+    font-weight: 700;
+    transition: .3s;
+    cursor: pointer; }
+    .person .total-money-up:hover, .person .total-money-down:hover {
+      bottom: 2px;
+      filter: brightness(110%); }
+    .person .total-money-up i, .person .total-money-down i {
+      position: absolute;
+      right: 5px;
+      top: 5px; }
+  .person .total-money-up {
+    margin-right: 5px;
+    background-color: #71C386;
+    border: 1px solid #B4CDBB;
+    border-bottom: 5px solid #B4CDBB;
+    color: #3B433D; }
+  .person .total-money-down {
+    margin-left: 5px;
+    background-color: #ED7161;
+    border: 1px solid #F0B2AA;
+    border-bottom: 5px solid #F0B2AA;
+    color: #6D514E; }
+  .person .close, .person .link-person {
+    font-size: 2em; }
+  .person .close {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+  .person .link-person {
+    position: absolute;
+    bottom: 10px;
+    right: 10px; }
+
+/* --- style des groupes --- */
+[id*="groupe"] {
+  position: relative;
+  border: 1px solid #006564;
+  margin: 25px 0 60px 0;
+  padding: 50px; }
+
+.label-grp {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 30px;
+  position: absolute;
+  top: -30px;
+  left: -1px;
+  background-color: #006564;
+  color: #ECF0F1; }
+
+.flexbox {
+  display: flex;
+  justify-content: space-around; }
+
+header, footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  background-color: whitesmoke;
+  color: #222;
+  padding: 10px; }
+
+footer {
+  font-weight: 700;
+  justify-content: center;
+  font-size: 0.7em; }
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2em;
+  text-align: right;
+  font-weight: bolder;
+  color: #006564; }
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 25px;
+  background-image: url(../svg/home.svg); }
+
+nav {
+  width: 20%;
+  height: 100vh;
+  background-color: whitesmoke;
+  color: #222; }
+  nav li {
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    padding: 0 25px;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    border-bottom: 1px solid #006564;
+    font-weight: 700;
+    transition: .4s; }
+    nav li:hover {
+      background-color: #999;
+      color: #fff; }
+  nav i {
+    margin-left: 10px; }
 
 @font-face {
   font-family: 'montserratbold';
