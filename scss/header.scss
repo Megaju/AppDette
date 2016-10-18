@@ -9,9 +9,13 @@ header, footer {
 }
 
 footer {
+    position: relative;
     font-weight: 700;
     justify-content: center;
     font-size: $fs-smart;
+    background-image: url(../images/escheresque.png);
+    z-index: 100;
+    border-top: 1px solid $dark;
 }
 
 h1 {

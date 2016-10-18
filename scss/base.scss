@@ -4,7 +4,9 @@ body {
 
 section {
     width: 100%;
-    padding: 25px;
+    height: 90vh;
+    padding: 25px 25px 5px 25px;
+    overflow-y: scroll;
     background-color: $back2;
     background-image: url(../images/seigaiha.png);
 }
@@ -54,48 +56,8 @@ bold {
         font-weight: 700;
     }
     
-    .total-money-up, .total-money-down {
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        height: 30px;
-        line-height: 30px;
-        padding: 5px 15px;
-        margin: 20px 0;
-        background-color: $back;
-        color: $back;
-        text-align: center;
-        font-weight: 700;
-        transition: .3s;
-        cursor: pointer;
-        
-        &:hover {
-            bottom: 2px;
-            filter:brightness(110%);
-        }
-        
-        i {
-            position: absolute;
-            right: 5px;
-            top: 5px;
-        }
-    }
-    
-    .total-money-up {
-        margin-left: 5px;
-        background-color: $plus;
-        border: 1px solid $plus2;
-        border-bottom: 5px solid $plus2;
-        color: $plus-txt;
-    }
-    
-    .total-money-down {
-        margin-right: 5px;
-        background-color: $moins;
-        border: 1px solid $moins2;
-        border-bottom: 5px solid $moins2;
-        color: $moins-txt;
-    }
+    /* ici mettre les bouttons */
+    @include buttons-dette;
     
     .close, .link-person {
         font-size: $fs-medium;
@@ -118,9 +80,11 @@ bold {
 [id*="groupe"] {
     position: relative;
     border: 1px solid $complementary;
-    margin: 30px 0 60px 0;
-    padding: 50px;
+    margin: 60px 0;
+    padding: 50px 50px 0 50px;
     background-color: rgba(255, 255, 255, .5);
+    
+    @include buttons-dette;
 }
 
 .label-grp {
@@ -134,10 +98,52 @@ bold {
     align-items: center;
     background-color: $complementary;
     color: $back;
+    font-weight: 700;
     
     .close {
         position: absolute;
         right: 5px;
         top: 4px;
+    }
+}
+
+.total-grp-dette {
+    margin: 25px auto;
+    padding: 25px 50px 0 50px;
+    background-color: #ddd;
+    color: #222;
+    border: 1px solid #eee;
+    box-shadow: 0 0 3px #bbb;
+    text-align: center;
+    font-weight: 700;
+    
+    .flexbox {
+        width: 25%;
+        margin: 0 auto;
+    }
+}
+
+/* --- ecran de connection --- */
+.login-back {
+    padding: 100px;
+    height: 100vh;
+}
+
+.about {
+    margin: 50px;    
+    padding: 50px;
+    background-color: rgba(255, 255, 255, .5);
+    color: $dark;
+    
+    .handshake {
+        width: 200px;
+        height: 200px;
+        margin: 0px auto;
+        background-image: url(../svg/handshake.svg);
+        background-size: 100%;
+    }
+    
+    h2 {
+        font-size: $fs-large;
     }
 }
