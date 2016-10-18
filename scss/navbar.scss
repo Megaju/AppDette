@@ -1,8 +1,8 @@
 nav {
     width: 20%;
     height: 100vh;
-    background-color: $backcolor;
-    color: $textcolor;
+    background-color: $back;
+    color: $dark;
     
     li {
         height: 50px;
@@ -11,13 +11,23 @@ nav {
         padding: 0 25px;
         text-transform: uppercase;
         font-size: $fs-smart;
-        border-bottom: 1px solid $bordercolor;
+        border-bottom: 1px solid $complementary;
         font-weight: 700;
         transition: .4s;
         
-        &:hover, &.actif {
-            background-color: $backcolor2;
+        &:hover {
+            background-color: $back2;
             color: #fff;
+        }
+        
+        &.add-user {
+            background-color: $important;
+            color: $back;
+            border-bottom: 1px solid $important;
+        }
+        
+        &.add-user:hover {
+            background-color: $important-hover;
         }
     }
     

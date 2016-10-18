@@ -1,11 +1,11 @@
 body {
-    background-color: $backcolor;
+    background-color: $back;
 }
 
 section {
     width: 100%;
     padding: 25px;
-    background-color: $backcolor2;
+    background-color: $back2;
     background-image: url(../images/seigaiha.png);
 }
 
@@ -17,18 +17,18 @@ section {
     height: 50px;
     line-height: 50px;
     text-align: center;
-    background-color: $bordercolor;
-    color: $secondcolor;
-    border-bottom: 1px solid $secondcolor;
+    background-color: $complementary;
+    color: $link;
+    border-bottom: 1px solid $link;
 }
 
 a {
     text-decoration: none;
-    color: $secondcolor;
+    color: $link;
     transition: .3s;
     
     &:hover {
-        color: $secondcolor-hover;
+        color: $link-hover;
     }
 }
 
@@ -62,8 +62,8 @@ bold {
         line-height: 30px;
         padding: 5px 15px;
         margin: 20px 0;
-        background-color: $backcolor;
-        color: $color-light;
+        background-color: $back;
+        color: $back;
         text-align: center;
         font-weight: 700;
         transition: .3s;
@@ -82,19 +82,19 @@ bold {
     }
     
     .total-money-up {
-        margin-right: 5px;
-        background-color: $color-plus;
-        border: 1px solid $color-plus2;
-        border-bottom: 5px solid $color-plus2;
-        color: $color-plus-text;
+        margin-left: 5px;
+        background-color: $plus;
+        border: 1px solid $plus2;
+        border-bottom: 5px solid $plus2;
+        color: $plus-txt;
     }
     
     .total-money-down {
-        margin-left: 5px;
-        background-color: $color-moins;
-        border: 1px solid $color-moins2;
-        border-bottom: 5px solid $color-moins2;
-        color: $color-moins-text;
+        margin-right: 5px;
+        background-color: $moins;
+        border: 1px solid $moins2;
+        border-bottom: 5px solid $moins2;
+        color: $moins-txt;
     }
     
     .close, .link-person {
@@ -117,7 +117,7 @@ bold {
 /* --- style des groupes --- */
 [id*="groupe"] {
     position: relative;
-    border: 1px solid $bordercolor;
+    border: 1px solid $complementary;
     margin: 25px 0 60px 0;
     padding: 50px;
     background-color: rgba(255, 255, 255, .5);
@@ -130,6 +130,6 @@ bold {
     position: absolute;
     top: -30px;
     left: -1px;
-    background-color: $bordercolor;
-    color: $color-light;
+    background-color: $complementary;
+    color: $back;
 }

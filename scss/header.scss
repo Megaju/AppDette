@@ -3,8 +3,8 @@ header, footer {
     justify-content: flex-end;
     align-items: center;
     height: 50px;
-    background-color: $backcolor;
-    color: $textcolor;
+    background-color: $back;
+    color: $dark;
     padding: 10px;
 }
 
@@ -19,7 +19,7 @@ h1 {
     font-size: $fs-medium;
     text-align: right;
     font-weight: bolder;
-    color: $bordercolor;
+    color: $complementary;
 }
 
 .logo {
