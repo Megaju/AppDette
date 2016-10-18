@@ -118,18 +118,26 @@ bold {
 [id*="groupe"] {
     position: relative;
     border: 1px solid $complementary;
-    margin: 25px 0 60px 0;
+    margin: 30px 0 60px 0;
     padding: 50px;
     background-color: rgba(255, 255, 255, .5);
 }
 
 .label-grp {
-    height: 30px;
-    line-height: 30px;
-    padding: 0 30px;
     position: absolute;
-    top: -30px;
+    top: -40px;
     left: -1px;
+    height: 40px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     background-color: $complementary;
     color: $back;
+    
+    .close {
+        position: absolute;
+        right: 5px;
+        top: 4px;
+    }
 }

@@ -141,19 +141,25 @@ bold {
 [id*="groupe"] {
   position: relative;
   border: 1px solid #006564;
-  margin: 25px 0 60px 0;
+  margin: 30px 0 60px 0;
   padding: 50px;
   background-color: rgba(255, 255, 255, 0.5); }
 
 .label-grp {
-  height: 30px;
-  line-height: 30px;
-  padding: 0 30px;
   position: absolute;
-  top: -30px;
+  top: -40px;
   left: -1px;
+  height: 40px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   background-color: #006564;
   color: whitesmoke; }
+  .label-grp .close {
+    position: absolute;
+    right: 5px;
+    top: 4px; }
 
 .flexbox {
   display: flex;
