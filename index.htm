@@ -55,18 +55,19 @@
         <div id="group-board">
           
            <!-- INPUT POUR PREPARER LE GROUPE SOUHAITER POUR FILTRER -->
-            <label for="grp">Vos groupes > </label>
-            <select name="grp" id="grp" ng-model="groupFilter">
-                <option value="Par defaut" selected>Default</option>
+            <label>Vos groupes <i class="fa fa-arrow-right"></i></label>
+            <select ng-model="groupFilter">
+               
+                <option value="">Tous</option>
                 <option value="Groupe 1">Groupe 1</option>
                 <option value="Groupe 2">Groupe 2</option>
                 <option value="Groupe 3">Groupe 3</option>
-                <option value="Groupe 4">Groupe 4</option>
+                <!--<option value="{{ group:name }}" ng-repeat="group in groups">{{ group:name }}</option>-->
             </select>
-           
+            
             <!-- GRP -->
             <div class="group" ng-controller="usersCtrl">
-                <div class="label-grp">{{ groupFilter }} <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> </div>
+                <div class="label-grp">{{ groupFilter }} <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a></div>
                 <div class="persons">
                    
                     <!-- BLOC POUR UNE PERSONNE -->
@@ -77,6 +78,7 @@
                             <p class="total-money-up">{{ user.pickup }} $<i class="fa fa-arrow-down"></i></p>
                         </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
                     </div>
+                    
                 </div>
                 
                 <!-- TOTAL DES DETTES DU GROUPE -->
