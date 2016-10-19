@@ -114,7 +114,7 @@ textarea:focus {
     margin: 5px auto;
 }
 
-#button-blue, .submit-inscription {
+#button-blue {
     position: relative;
     width: 100%;
     margin: 0 auto;
@@ -140,11 +140,6 @@ textarea:focus {
 .submit:hover {
     color: $complementary;
 }
-
-.submit-inscription {
-    background-color: $plus;
-}
-
 
 .ease {
     position: absolute;

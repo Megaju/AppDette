@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,9 +9,13 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <!-- custom scrollbar -->
     <!--<script src="js/jquery.mCustomScrollbar.min.js"></script>-->
+    <script src="js/angular.min.js"></script>
+    <script src="js/account.js"></script><!-- compte de l'utilisateur -->
+    <script src="js/groups.js"></script><!-- les groupes enregistrés -->
+    <script src="js/users.js"></script><!-- les gens enregistrés -->
 </head>
 
-<body>
+<body ng-app="appDette">
     <header>
         <h1>App Dette</h1>
         <div class="logo"></div>
@@ -42,157 +46,52 @@
         
         <!-- TABLEAU DE BORD -->
         <section>
-            <div class="page-description">
-                <p>Bonjour
-                    <bold>{{ NAME }}</bold>, retrouvez ici toutes les personnes enregistrées.</p>
-            </div>
-            
+        <div class="page-description" ng-controller="accountCtrl">
+            <p>Bonjour
+                <bold>{{ name }}</bold>, retrouvez ici toutes les personnes enregistrées.</p>
+        </div>
+        
+        <div ng-controller="groupsCtrl">
+        <div id="group-board">
+          
+           <!-- INPUT POUR PREPARER LE GROUPE SOUHAITER POUR FILTRER -->
+            <label for="grp">Vos groupes > </label>
+            <select name="grp" id="grp" ng-model="groupFilter">
+                <option value="Par defaut" selected>Default</option>
+                <option value="Groupe 1">Groupe 1</option>
+                <option value="Groupe 2">Groupe 2</option>
+                <option value="Groupe 3">Groupe 3</option>
+                <option value="Groupe 4">Groupe 4</option>
+            </select>
+           
             <!-- GRP -->
-            <div id="groupe1">
-                <div class="label-grp"> Groupe 1 <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> </div>
-                <div class="flexbox">
+            <div class="group" ng-controller="usersCtrl">
+                <div class="label-grp">{{ groupFilter }} <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> </div>
+                <div class="persons">
+                   
                     <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person">
-                        <p class="name">Julien</p>
+                    <div class="person" ng-repeat="user in users | filter:groupFilter">
+                        <p class="name">{{ user.name }}</p>
                         <div class="flexbox">
-                            <p class="total-money-down">354 $ <i class="fa fa-arrow-up"></i></p>
-                            <p class="total-money-up">134 $ <i class="fa fa-arrow-down"></i></p>
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person">
-                        <p class="name">Lise</p>
-                        <div class="flexbox">
-                            <p class="total-money-down">354 $ <i class="fa fa-arrow-up"></i></p>
-                            <p class="total-money-up">134 $ <i class="fa fa-arrow-down"></i></p>
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person">
-                        <p class="name">Becca</p>
-                        <div class="flexbox">
-                            <p class="total-money-down">354 $ <i class="fa fa-arrow-up"></i></p>
-                            <p class="total-money-up">134 $ <i class="fa fa-arrow-down"></i></p>
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
+                            <p class="total-money-down">{{ user.debt }} $<i class="fa fa-arrow-up"></i></p>
+                            <p class="total-money-up">{{ user.pickup }} $<i class="fa fa-arrow-down"></i></p>
+                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                    </div>
                 </div>
                 
-                <div class="total-grp-dette">
+                <!-- TOTAL DES DETTES DU GROUPE -->
+                <!--<div class="total-grp-dette">
                     Total des dettes du groupe
                     <div class="flexbox">
                         <p class="total-money-down">1062 $ <i class="fa fa-arrow-up"></i></p>
                         <p class="total-money-up">402 $ <i class="fa fa-arrow-down"></i></p>
                     </div>
-                </div>
-            </div>
-            
-            <!-- GRP -->
-            <div id="groupe2">
-                <div class="label-grp"> Groupe 2 <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> </div>
-                <div class="flexbox">
-                    <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person">
-                        <p class="name">Tyjow</p>
-                        <div class="flexbox">
-                            <p class="total-money-down">354 $ <i class="fa fa-arrow-up"></i></p>
-                            <p class="total-money-up">134 $ <i class="fa fa-arrow-down"></i></p>
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person">
-                        <p class="name">Roro</p>
-                        <div class="flexbox">
-                            <p class="total-money-down">354 $ <i class="fa fa-arrow-up"></i></p>
-                            <p class="total-money-up">134 $ <i class="fa fa-arrow-down"></i></p>
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person">
-                        <p class="name">Ange</p>
-                        <div class="flexbox">
-                            <p class="total-money-down">354 $ <i class="fa fa-arrow-up"></i></p>
-                            <p class="total-money-up">134 $ <i class="fa fa-arrow-down"></i></p>
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                </div>
-                <div class="flexbox">
-                    <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person">
-                        <p class="name">Erwann</p>
-                        <div class="flexbox">
-                            <p class="total-money-down">354 $ <i class="fa fa-arrow-up"></i></p>
-                            <p class="total-money-up">134 $ <i class="fa fa-arrow-down"></i></p>
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person">
-                        <p class="name">Antoine</p>
-                        <div class="flexbox">
-                            <p class="total-money-down">354 $ <i class="fa fa-arrow-up"></i></p>
-                            <p class="total-money-up">134 $ <i class="fa fa-arrow-down"></i></p>
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person">
-                        <p class="name">Mopi</p>
-                        <div class="flexbox">
-                            <p class="total-money-down">354 $ <i class="fa fa-arrow-up"></i></p>
-                            <p class="total-money-up">134 $ <i class="fa fa-arrow-down"></i></p>
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                </div>
-                
-                <div class="total-grp-dette">
-                    Total des dettes du groupe
-                    <div class="flexbox">
-                        <p class="total-money-down">1062 $ <i class="fa fa-arrow-up"></i></p>
-                        <p class="total-money-up">402 $ <i class="fa fa-arrow-down"></i></p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- GRP -->
-            <div id="groupe3">
-                <div class="label-grp"> Groupe 3 <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> </div>
-                <div class="flexbox">
-                    <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person">
-                        <p class="name">Thomas</p>
-                        <div class="flexbox">
-                            <p class="total-money-down">354 $ <i class="fa fa-arrow-up"></i></p>
-                            <p class="total-money-up">134 $ <i class="fa fa-arrow-down"></i></p>
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person">
-                        <p class="name">Valentin</p>
-                        <div class="flexbox">
-                            <p class="total-money-down">354 $ <i class="fa fa-arrow-up"></i></p>
-                            <p class="total-money-up">134 $ <i class="fa fa-arrow-down"></i></p>
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person">
-                        <p class="name">Juliette</p>
-                        <div class="flexbox">
-                            <p class="total-money-down">354 $ <i class="fa fa-arrow-up"></i></p>
-                            <p class="total-money-up">134 $ <i class="fa fa-arrow-down"></i></p>
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                </div>
-                <div class="flexbox">
-                    <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person">
-                        <p class="name">Ghost</p>
-                        <div class="flexbox">
-                            <p class="total-money-down">354 $ <i class="fa fa-arrow-up"></i></p>
-                            <p class="total-money-up">134 $ <i class="fa fa-arrow-down"></i></p>
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person">
-                        <p class="name">L</p>
-                        <div class="flexbox">
-                            <p class="total-money-down">354 $ <i class="fa fa-arrow-up"></i></p>
-                            <p class="total-money-up">134 $ <i class="fa fa-arrow-down"></i></p>
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                </div>
-                
-                <div class="total-grp-dette">
-                    Total des dettes du groupe
-                    <div class="flexbox">
-                        <p class="total-money-down">1062 $ <i class="fa fa-arrow-up"></i></p>
-                        <p class="total-money-up">402 $ <i class="fa fa-arrow-down"></i></p>
-                    </div>
-                </div>
-            </div>
+                </div>-->
+            </div><!-- /group -->
+        </div><!-- /group-board -->
+        </div><!-- /usersCtrl -->
+    </div><!-- /flexbox -->
+        
         </section>
     </div>
     

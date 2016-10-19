@@ -41,7 +41,8 @@ bold {
 /* --- style des bloc des personnes --- */
 .person {
     position: relative;
-    width: 30%;
+    /*width: 30%;
+    min-width: 30%;*/
     padding: 0 20px 40px 20px;
     margin: 15px;
     background-color: #ddd;
@@ -77,7 +78,7 @@ bold {
 }
 
 /* --- style des groupes --- */
-[id*="groupe"] {
+.group {
     position: relative;
     border: 1px solid $complementary;
     margin: 60px 0;
