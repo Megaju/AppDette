@@ -54,21 +54,18 @@
         <div ng-controller="groupsCtrl">
         <div id="group-board">
           
-           <!-- INPUT POUR PREPARER LE GROUPE SOUHAITER POUR FILTRER -->
-            <label>Vos groupes <i class="fa fa-arrow-right"></i></label>
-            <select ng-model="groupFilter">
-               
-                <option value="">Tous</option>
-                <option value="Groupe 1">Groupe 1</option>
-                <option value="Groupe 2">Groupe 2</option>
-                <option value="Groupe 3">Groupe 3</option>
-                <!--<option value="{{ group:name }}" ng-repeat="group in groups">{{ group:name }}</option>-->
-            </select>
-            
             <!-- GRP -->
             <div class="group" ng-controller="usersCtrl">
-                <div class="label-grp">{{ groupFilter }} <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a></div>
-                <div class="persons">
+                <select ng-model="groupFilter" class="label-grp">
+                   
+                    <option value="">Tous</option>
+                    <option value="Groupe 1">Groupe 1</option>
+                    <option value="Groupe 2">Groupe 2</option>
+                    <option value="Groupe 3">Groupe 3</option>
+                    <!--<option value="{{ group:name }}" ng-repeat="group in groups">{{ group:name }}</option>-->
+                </select>
+                <!--<div class="label-grp">{{ groupFilter }} <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a></div>
+                --><div class="persons">
                    
                     <!-- BLOC POUR UNE PERSONNE -->
                     <div class="person" ng-repeat="user in users | filter:groupFilter">

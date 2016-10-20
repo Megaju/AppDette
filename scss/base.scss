@@ -95,6 +95,8 @@ bold {
     height: 40px;
     padding: 0 30px;
     display: flex;
+    outline: 0;
+    border: 1px solid $complementary;
     justify-content: flex-end;
     align-items: center;
     background-color: $complementary;
