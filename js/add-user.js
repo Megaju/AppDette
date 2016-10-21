@@ -55,7 +55,7 @@ app.controller('usersCtrl', function($scope) {
 
 app.controller("userFormController", function ($scope) {
     $scope.addUser = function (user) {
-        $scope.users.push(user);
+        $scope.usersData.push(user);
         $scope.user = {};
     };
 

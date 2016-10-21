@@ -12,8 +12,8 @@
     <script src="js/angular.min.js"></script>
     <script src="js/angular-filter.min.js"></script>
     <script src="js/account.js"></script><!-- compte de l'utilisateur -->
-    <script src="js/groups.js"></script><!-- les groupes enregistrés -->
     <script src="js/users.js"></script><!-- les gens enregistrés -->
+    <!--<script src="js/add-user.js"></script>-->
 </head>
 
 <body ng-app="appDette">
@@ -22,14 +22,29 @@
         <div class="logo"></div>
     </header>
     
-    <div class="flexbox">
+    <div class="flexbox" ng-controller="usersCtrl">
        
         <!-- NAVIGATION -->
         <nav>
             <ul>
                 <a href="#">
-                    <li class="add-user">Ajouter personne<i class="fa fa-user-plus" aria-hidden="true"></i></li>
+                    <li class="add-user" id="myBtn">Ajouter personne<i class="fa fa-user-plus" aria-hidden="true"></i></li>
                 </a>
+                
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                  <!-- Modal content -->
+                  <div class="modal-content" ng-controller="userFormController">
+                    <span class="close"><i class="fa fa-close"></i></span>
+                    <input type="text" placeholder="nom" ng-model="user.name">
+                    <input type="text" placeholder="groupe" ng-model="user.group">
+                    <input type="text" placeholder="argent qu'il doit" ng-model="user.debt">
+                    <input type="text" placeholder="argent que tu lui doit" ng-model="user.pickup">
+                    <input type="submit" value="ajouter" ng-click="addUser(user)">
+                </div>
+                </div>
+                <script src="js/modalbox.js"></script>
+                
                 <a href="#">
                     <li class="actif">Tableau de bord<i class="fa fa-bar-chart" aria-hidden="true"></i></li>
                 </a>
@@ -55,7 +70,7 @@
         <div id="group-board">
           
             <!-- GRP -->
-            <div class="group" ng-controller="usersCtrl">
+            <div class="group">
                 <select ng-model="query" class="label-grp">
                    
                     <option value="">Tous</option>
