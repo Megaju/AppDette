@@ -261,27 +261,53 @@ bold {
 
 /* Modal Content/Box */
 .modal-content {
+  text-align: center;
   position: relative;
   background-color: #fefefe;
   margin: 15% auto;
   /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
-  /* Could be more or less, depending on screen size */ }
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold; }
-  .close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer; }
+  width: 30%;
+  /* Could be more or less, depending on screen size */
+  background-image: url(../images/escheresque.png);
+  border: 1px solid #006564;
+  /* The Close Button */ }
+  .modal-content [class*="user"], .modal-content [class*="arrow"] {
+    color: #006564; }
+  .modal-content input {
+    margin: 10px auto;
+    padding: 0 15px;
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    text-transform: capitalize;
+    outline: 0;
+    color: #006564;
+    border: 1px solid #006564; }
+    .modal-content input:focus {
+      color: #222;
+      border: 1px solid #222; }
+    .modal-content input:last-child {
+      width: 40%;
+      height: 50px;
+      line-height: 40px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 2px solid #006564;
+      font-weight: 700;
+      transition: .4s; }
+  .modal-content .close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold; }
+    .modal-content .close:hover, .modal-content .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer; }
 
 .flexbox {
   display: flex;

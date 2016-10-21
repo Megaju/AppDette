@@ -170,28 +170,61 @@ bold {
 
 /* Modal Content/Box */
 .modal-content {
+    text-align: center;
     position: relative;
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 30%; /* Could be more or less, depending on screen size */
+    background-image: url(../images/escheresque.png);
+    border: 1px solid $complementary;
     
+    [class*="user"], [class*="arrow"] {
+        color: $complementary;
+    } 
     
-}
-
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
+    input {
+        margin: 10px auto;
+        padding: 0 15px;
+        width: 90%;
+        height: 40px;
+        line-height: 40px;
+        text-transform: capitalize;
+        outline: 0;
+        color: $complementary;
+        border: 1px solid $complementary;
+        
+        &:focus {
+            color: $dark;
+            border: 1px solid $dark;
+        }
+        
+        &:last-child {
+            width: 40%;
+            height: 50px;
+            line-height: 40px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: 2px solid $complementary;
+            font-weight: 700;
+            transition: .4s;
+        }
+    }
     
-    &:hover, &:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
+    /* The Close Button */
+    .close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        
+        &:hover, &:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     }
 }

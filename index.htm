@@ -36,9 +36,13 @@
                   <!-- Modal content -->
                   <div class="modal-content" ng-controller="userFormController">
                     <span class="close"><i class="fa fa-close"></i></span>
+                    <i class="fa fa-user"></i>
                     <input type="text" placeholder="nom" ng-model="user.name">
+                    <i class="fa fa-users"></i>
                     <input type="text" placeholder="groupe" ng-model="user.group">
+                    <i class="fa fa-arrow-down"></i>
                     <input type="text" placeholder="argent qu'il doit" ng-model="user.debt">
+                    <i class="fa fa-arrow-up"></i>
                     <input type="text" placeholder="argent que tu lui doit" ng-model="user.pickup">
                     <input type="submit" value="ajouter" ng-click="addUser(user)">
                 </div>
