@@ -51,24 +51,20 @@
                 <bold>{{ name }}</bold>, retrouvez ici toutes les personnes enregistrées.</p>
         </div>
         
-        <div ng-controller="groupsCtrl">
         <div id="group-board">
           
             <!-- GRP -->
             <div class="group" ng-controller="usersCtrl">
-                <select ng-model="groupFilter" class="label-grp">
+                <select ng-model="query" class="label-grp">
                    
                     <option value="">Tous</option>
-                    <option value="Groupe 1">Groupe 1</option>
-                    <option value="Groupe 2">Groupe 2</option>
-                    <option value="Groupe 3">Groupe 3</option>
-                    <!--<option value="{{ group:name }}" ng-repeat="group in groups">{{ group:name }}</option>-->
+                    <option value="{{ user.group }}" ng-repeat="user in users">{{ user.group }}</option>
                 </select>
                 <!--<div class="label-grp">{{ groupFilter }} <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a></div>
                 --><div class="persons">
                    
                     <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person" ng-repeat="user in users | filter:groupFilter">
+                    <div class="person" ng-repeat="user in users | filter:{group:query}">
                         <p class="name">{{ user.name }}</p>
                         <div class="flexbox">
                             <p class="total-money-down">{{ user.debt }} $<i class="fa fa-arrow-up"></i></p>
@@ -88,7 +84,6 @@
                 </div>-->
             </div><!-- /group -->
         </div><!-- /group-board -->
-        </div><!-- /usersCtrl -->
     </div><!-- /flexbox -->
         
         </section>

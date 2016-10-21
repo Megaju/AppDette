@@ -204,9 +204,6 @@ bold {
     position: absolute;
     right: 5px;
     top: 4px; }
-  .label-grp option {
-    outline: 0;
-    border: 0; }
 
 .total-grp-dette {
   margin: 25px auto;
