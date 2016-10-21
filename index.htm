@@ -10,6 +10,7 @@
     <!-- custom scrollbar -->
     <!--<script src="js/jquery.mCustomScrollbar.min.js"></script>-->
     <script src="js/angular.min.js"></script>
+    <script src="js/angular-filter.min.js"></script>
     <script src="js/account.js"></script><!-- compte de l'utilisateur -->
     <script src="js/groups.js"></script><!-- les groupes enregistrés -->
     <script src="js/users.js"></script><!-- les gens enregistrés -->
@@ -58,7 +59,7 @@
                 <select ng-model="query" class="label-grp">
                    
                     <option value="">Tous</option>
-                    <option value="{{ user.group }}" ng-repeat="user in users">{{ user.group }}</option>
+                    <option value="{{ key }}" ng-repeat="(key, value) in users | groupBy: 'group'">{{ key }}</option>
                 </select>
                 <!--<div class="label-grp">{{ groupFilter }} <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a></div>
                 --><div class="persons">
