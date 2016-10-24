@@ -3,7 +3,7 @@
     justify-content: space-around;
 }
 
-.persons {
+.persons, .depenses {
     text-align: center;
     
     .name {
@@ -11,7 +11,11 @@
     }
 }
 
-.person {
+.person, .depense {
     display: inline-block;
     width: 20%;
+}
+
+.depense {
+    width: 100%;
 }

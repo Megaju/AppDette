@@ -34,12 +34,12 @@ a {
     }
 }
 
-bold {
+bold, b {
     font-weight: 700;
 }
 
 /* --- style des bloc des personnes --- */
-.person {
+.person, .depense {
     position: relative;
     padding: 0 20px 40px 20px;
     margin: 15px;
@@ -48,6 +48,7 @@ bold {
     border: 1px solid #eee;
     box-shadow: 0 0 3px #bbb;
     
+    /* nom du payeur */
     .name {
         margin-top: 15px;
         font-size: $fs-normal+.4;
@@ -72,6 +73,21 @@ bold {
         position: absolute;
         bottom: 10px;
         right: 10px;
+    }
+    
+    .label-depense {
+        position: relative;
+        padding: 40px 5px 15px 5px;
+        margin: 10px 0;
+        border: 1px solid rgba(255, 255, 255, .5);
+        background-color: rgba(255, 255, 255, .5);
+        
+        b {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            opacity: .7;
+        }
     }
 }
 
@@ -259,3 +275,4 @@ bold {
         }
     }
 }
+

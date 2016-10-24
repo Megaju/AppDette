@@ -22,7 +22,7 @@
         <div class="logo"></div>
     </header>
     
-    <div class="flexbox" ng-controller="usersCtrl">
+    <div class="flexbox" ng-controller="usersCtrl" ng-controller="depensesCtrl">
        
         <!-- NAVIGATION -->
         <nav>
@@ -82,45 +82,23 @@
         
         <!-- TABLEAU DE BORD -->
         <section>
-        <div class="page-description" ng-controller="accountCtrl">
-            <p>Bonjour
-                <bold>{{ name }}</bold>, retrouvez ici toutes les personnes enregistrées.</p>
-        </div>
         
-        <div id="group-board" ng-controller="depensesCtrl">
-          
-            <!-- GRP -->
-            <div class="group">
-                <select ng-model="query" class="label-grp">
+            <div class="depenses">
+                <div class="depense">
                    
-                    <option value="">Tous</option>
-                    <option value="{{ key }}" ng-repeat="(key, value) in users | groupBy: 'usergroup'">{{ key }}</option>
-                </select>
-                <div class="persons">
                    
-                    <!-- BLOC POUR UNE PERSONNE -->
-                    <div class="person" ng-repeat="user in users | filter:{usergroup:query}">
-                        <p class="name"><i class="fa fa-exclamation-triangle {{ user.usercolor }}"></i> {{ user.username }}</p>
-                        <div class="flexbox">
-                            <p class="total-money-down" ng-repeat="depense in depenses | filter:{usergroup:query}">{{ depense.Montant }} $<i class="fa fa-arrow-up"></i></p>
-                            <!--<p class="total-money-down" ng-repeat="depense in depenses">{{aUsers[depense.Payeur]}} $<i class="fa fa-arrow-up"></i></p>
-                            --><!--<p class="total-money-up">{{ user.pickup }} $<i class="fa fa-arrow-down"></i></p>-->
-                        </div> <a href="#" class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a> <a href="#" class="link-person"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-                    </div>
+                    <p class="name"><i class="fa fa-exclamation-triangle {{ user.usercolor }}"></i> Payeur</p>
+                    <p class="total-money-down">91 $<i class="fa fa-arrow-up"></i></p>
+                    <p class="label-depense"><b><i class="fa fa-user" aria-hidden="true"></i> Personnes concernées</b>Nom, Nom, Nom <i>-3-</i></p>
+                    
+                    
+                    <p class="label-depense"><b><i class="fa fa-calendar" aria-hidden="true"></i> Date</b>02 Janvier 1991</p>
+                    <p class="label-depense"><b><i class="fa fa-users" aria-hidden="true"></i> Groupe</b>Ete 2016</p>
+                    <p class="label-depense"><b><i class="fa fa-pencil" aria-hidden="true"></i> Description</b>Petit Déjeuner</p>
+                    
                     
                 </div>
-                
-                <!-- TOTAL DES DETTES DU GROUPE -->
-                <!--<div class="total-grp-dette">
-                    Total des dettes du groupe
-                    <div class="flexbox">
-                        <p class="total-money-down">1062 $ <i class="fa fa-arrow-up"></i></p>
-                        <p class="total-money-up">402 $ <i class="fa fa-arrow-down"></i></p>
-                    </div>
-                </div>-->
-            </div><!-- /group -->
-        </div><!-- /group-board -->
-    </div><!-- /flexbox -->
+            </div>
         
         </section>
     </div>

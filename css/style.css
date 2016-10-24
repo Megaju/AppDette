@@ -79,11 +79,11 @@ a {
   a:hover {
     color: orange; }
 
-bold {
+bold, b {
   font-weight: 700; }
 
 /* --- style des bloc des personnes --- */
-.person {
+.person, .depense {
   position: relative;
   padding: 0 20px 40px 20px;
   margin: 15px;
@@ -91,13 +91,14 @@ bold {
   color: #222;
   border: 1px solid #eee;
   box-shadow: 0 0 3px #bbb;
+  /* nom du payeur */
   /* ici mettre les bouttons */ }
-  .person .name {
+  .person .name, .depense .name {
     margin-top: 15px;
     font-size: 1.4em;
     text-transform: capitalize;
     font-weight: 700; }
-  .person .total-money-up, .person .total-money-down {
+  .person .total-money-up, .person .total-money-down, .depense .total-money-up, .depense .total-money-down {
     position: relative;
     display: inline-block;
     width: 100%;
@@ -111,35 +112,46 @@ bold {
     font-weight: 700;
     transition: .3s;
     cursor: pointer; }
-    .person .total-money-up:hover, .person .total-money-down:hover {
+    .person .total-money-up:hover, .person .total-money-down:hover, .depense .total-money-up:hover, .depense .total-money-down:hover {
       bottom: 2px;
       filter: brightness(110%); }
-    .person .total-money-up i, .person .total-money-down i {
+    .person .total-money-up i, .person .total-money-down i, .depense .total-money-up i, .depense .total-money-down i {
       position: absolute;
       right: 5px;
       top: 5px; }
-  .person .total-money-up {
+  .person .total-money-up, .depense .total-money-up {
     margin-left: 5px;
     background-color: #71C386;
     border: 1px solid #B4CDBB;
     border-bottom: 5px solid #B4CDBB;
     color: #3B433D; }
-  .person .total-money-down {
+  .person .total-money-down, .depense .total-money-down {
     margin-right: 5px;
     background-color: #ED7161;
     border: 1px solid #F0B2AA;
     border-bottom: 5px solid #F0B2AA;
     color: #6D514E; }
-  .person .close, .person .link-person {
+  .person .close, .person .link-person, .depense .close, .depense .link-person {
     font-size: 2em; }
-  .person .close {
+  .person .close, .depense .close {
     position: absolute;
     top: 10px;
     right: 10px; }
-  .person .link-person {
+  .person .link-person, .depense .link-person {
     position: absolute;
     bottom: 10px;
     right: 10px; }
+  .person .label-depense, .depense .label-depense {
+    position: relative;
+    padding: 40px 5px 15px 5px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5); }
+    .person .label-depense b, .depense .label-depense b {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      opacity: .7; }
 
 /* --- color user --- */
 .name .none {
@@ -330,14 +342,17 @@ bold {
   display: flex;
   justify-content: space-around; }
 
-.persons {
+.persons, .depenses {
   text-align: center; }
-  .persons .name {
+  .persons .name, .depenses .name {
     text-align: left; }
 
-.person {
+.person, .depense {
   display: inline-block;
   width: 20%; }
+
+.depense {
+  width: 100%; }
 
 .login-back {
   background-image: url(../images/bg.jpg);
