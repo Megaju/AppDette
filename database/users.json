@@ -1,52 +1,68 @@
 {
    "records":[
         {
+            "Id":0,
             "name":"Julien",
             "debt":40,
             "pickup":75,
-            "group":"Groupe 1"
+            "group":"Groupe 1",
+            "color":"none"
         },
         {
+            "Id":1,
             "name":"Lise",
             "debt":20,
             "pickup":0,
-            "group":"Groupe 1"
+            "group":"Groupe 1",
+            "color":"low"
         },
         {
+            "Id":2,
             "name":"Becca",
             "debt":20,
             "pickup":40,
-            "group":"Groupe 1"
+            "group":"Groupe 1",
+            "color":"moderate"
         },
         {
+            "Id":3,
             "name":"Tyjow",
             "debt":400,
             "pickup":120,
-            "group":"Groupe 3"
+            "group":"Par défaut",
+            "color":"high"
         },
         {
+            "Id":4,
             "name":"Juliette",
             "debt":4000,
             "pickup":1,
-            "group":"Groupe 2"
+            "group":"Groupe 2",
+            "color":"very-high"
         },
         {
+            "Id":5,
             "name":"Val",
             "debt":2,
             "pickup":4000,
-            "group":"Groupe 2"
+            "group":"Groupe 2",
+            "color":"very-high"
         },
         {
+            "Id":6,
             "name":"Roro",
             "debt":5,
             "pickup":1,
-            "group":"Par defaut"
+            "group":"Par défaut",
+            "color":"low"
         },
         {
+            "Id":7,
             "name":"Toto",
             "debt":65481,
             "pickup":2561,
-            "group":"Par defaut"
+            "group":"Groupe 3",
+            "color":"extreme"
         }
     ]
 }

@@ -41,8 +41,6 @@ bold {
 /* --- style des bloc des personnes --- */
 .person {
     position: relative;
-    /*width: 30%;
-    min-width: 30%;*/
     padding: 0 20px 40px 20px;
     margin: 15px;
     background-color: #ddd;
@@ -52,7 +50,7 @@ bold {
     
     .name {
         margin-top: 15px;
-        font-size: $fs-medium;
+        font-size: $fs-normal+.4;
         text-transform: capitalize;
         font-weight: 700;
     }
@@ -74,6 +72,39 @@ bold {
         position: absolute;
         bottom: 10px;
         right: 10px;
+    }
+}
+
+/* --- color user --- */
+
+.name {
+    .none {
+        display: none;
+    }
+    
+    .low {
+       color: #008030;
+        text-shadow: 0 0 0 #000;
+    }
+    
+    .moderate {
+       color: #0080d7; 
+        text-shadow: 0 0 0 #000;
+    }
+    
+    .high {
+       color: #fef200;
+        text-shadow: 0 0 0 #000;
+    }
+    
+    .very-high {
+       color: #fb7613;
+        text-shadow: 0 0 0 #000;
+    }
+    
+    .extreme {
+       color: #e40915;
+        text-shadow: 0 0 0 #000;
     }
 }
 
