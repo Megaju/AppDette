@@ -39,12 +39,22 @@
                     <!-- NAME -->
                     <i class="fa fa-user"></i>
                     <input type="text" placeholder="nom" ng-model="user.name">
-                    <!-- IMPORTANCE -->
+                    <!-- PRIORITE -->
                     <i class="fa fa-exclamation-triangle"></i>
-                    <input type="text" placeholder="priorité" ng-model="user.color">
+                    
+                        <input type="radio" name="priority" value="none">Pas important</input>
+                        <input type="radio" name="priority" value="low">Peu d'importance</input>
+                        <input type="radio" name="priority" value="moderate">Légèrement important</input>
+                        <input type="radio" name="priority" value="high">Important</input>
+                        <input type="radio" name="priority" value="very-high">Très important</input>
+                        <input type="radio" name="priority" value="extreme">URGENT!</input>
+                    
                     <!-- GROUP -->
                     <i class="fa fa-users"></i>
-                    <input type="text" placeholder="groupe" ng-model="user.group">
+                    <input list="groups" type="text" placeholder="groupe" ng-model="user.group">
+                    <datalist id="groups">
+                        <option value="{{ key }}" ng-repeat="(key, value) in users | groupBy: 'group'">{{ key }}</option>
+                    </datalist>
                     <!-- SA DETTE -->
                     <i class="fa fa-arrow-down"></i>
                     <input type="text" placeholder="argent qu'il doit" ng-model="user.debt">
