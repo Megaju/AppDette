@@ -1,76 +1,52 @@
 {
    "records":[
-      {
-         "Id":"67",
-         "username":"Erwann",
-         "usergroup":"Ete 2016",
-         "usercolor":"blue"
-      },
-      {
-         "Id":"66",
-         "username":"Eszter",
-         "usergroup":"Ete 2016",
-         "usercolor":"blue"
-      },
-      {
-         "Id":"82",
-         "username":"Benj",
-         "usergroup":"Ete 2016",
-         "usercolor":"red"
-      },
-      {
-         "Id":"87",
-         "username":"Momo",
-         "usergroup":"Ete 2016",
-         "usercolor":"black"
-      },
-      {
-         "Id":"83",
-         "username":"Aurele",
-         "usergroup":"Ete 2016",
-         "usercolor":"red"
-      },
-      {
-         "Id":"95",
-         "username":"Marc",
-         "usergroup":"Ete 2016",
-         "usercolor":"black"
-      },
-      {
-         "Id":"97",
-         "username":"Jo",
-         "usergroup":"Ete 2016",
-         "usercolor":"green"
-      },
-      {
-         "Id":"96",
-         "username":"MP",
-         "usergroup":"Ete 2016",
-         "usercolor":"black"
-      },
-      {
-         "Id":"103",
-         "username":"Romy",
-         "usergroup":"Ete 2016",
-         "usercolor":"white"
-      },
-      {
-         "Id":"101",
-         "username":"Baka",
-         "usergroup":"Ete 2016",
-         "usercolor":"red"
-      },
-      {
-         "Id":"100",
-         "username":"Bea",
-         "usergroup":"Ete 2016",
-         "usercolor":"green"
-      },
-      {
-         "Id":"102",
-         "username":"Coraline",
-         "usergroup":"Ete 2016",
-         "usercolor":"red"
-      }
-   ]
+        {
+            "name":"Julien",
+            "debt":40,
+            "pickup":75,
+            "group":"Groupe 1"
+        },
+        {
+            "name":"Lise",
+            "debt":20,
+            "pickup":0,
+            "group":"Groupe 1"
+        },
+        {
+            "name":"Becca",
+            "debt":20,
+            "pickup":40,
+            "group":"Groupe 1"
+        },
+        {
+            "name":"Tyjow",
+            "debt":400,
+            "pickup":120,
+            "group":"Groupe 3"
+        },
+        {
+            "name":"Juliette",
+            "debt":4000,
+            "pickup":1,
+            "group":"Groupe 2"
+        },
+        {
+            "name":"Val",
+            "debt":2,
+            "pickup":4000,
+            "group":"Groupe 2"
+        },
+        {
+            "name":"Roro",
+            "debt":5,
+            "pickup":1,
+            "group":"Par defaut"
+        },
+        {
+            "name":"Toto",
+            "debt":65481,
+            "pickup":2561,
+            "group":"Par defaut"
+        }
+    ]
 }

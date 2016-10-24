@@ -1,6 +1,6 @@
-app.controller('usersCtrl', function($scope) {
+/*app.controller('usersCtrl', function($scope) {*/
     
-    // les personnes enregistrées
+    /* les personnes enregistrées
     $scope.users = [
         {
             name:'Julien',
@@ -52,7 +52,23 @@ app.controller('usersCtrl', function($scope) {
         }
     ]
 });
+*/
+    
+app.controller('usersCtrl', function($scope, $http) {
+ $http({
+     method:'GET',
+     url : 'database/users.json'
+ }).then(function (response) {
+     $scope.users = response.data.records;
+     
+ } , 
+        function errorCallback(response){
+     console.log("Failure");
+     console.error(response);
+ });
+});
 
+               
 app.controller("userFormController", function ($scope) {
     $scope.addUser = function (user) {
         $scope.users.push(user);
