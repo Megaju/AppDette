@@ -472,11 +472,11 @@ nav {
   min-height: 100px;
   padding: 15px;
   border-bottom: 1px dashed #006564; }
-  .depense .payeur, .depense .users, .depense .calendar {
+  .depense .payeur, .depense .users, .depense .calendar, .depense .usd {
     margin: 15px 0;
     font-weight: 700;
     color: #006564; }
-    .depense .payeur i:last-child, .depense .users i:last-child, .depense .calendar i:last-child {
+    .depense .payeur i:last-child, .depense .users i:last-child, .depense .calendar i:last-child, .depense .usd i:last-child {
       font-weight: 500;
       color: #222; }
   .depense .bloc-description {

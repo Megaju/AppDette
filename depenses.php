@@ -53,10 +53,12 @@
                     
                     <p class="calendar"><i class="fa fa-calendar" aria-hidden="true"></i> Date - <i>{{ depense.Date }}</i></p>
                     
+                    <p class="usd"><i class="fa fa-usd" aria-hidden="true"></i> Montant - <i>50 €</i></p>
+                    
                     <div class="bloc-description">
                         <p class="label-description"><i class="fa fa-pencil" aria-hidden="true"></i> Description</p>
                         <p class="description">{{ depense.Description }}</p>
-                    </div>    
+                    </div> 
                 </div>
                 
             </div><!-- /group -->
