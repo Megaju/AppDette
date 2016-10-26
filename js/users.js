@@ -5,6 +5,7 @@ app.controller('usersCtrl', function($scope, $http) {
  }).then(function (response) {
      $scope.users = response.data.records;
      $scope.aUsers = [];
+  
      
 //Generating array aUsers with structure [id => username]
 for($user in $scope.users){
@@ -15,11 +16,10 @@ for($user in $scope.users){
     console.log("Failure");
     console.error(response);
  });
-
- 
 });
 
-               
+
+//Fonction pour ajout            
 app.controller("userFormController", function ($scope) {
     $scope.addUser = function (user) {
         $scope.users.push(user);
@@ -27,6 +27,7 @@ app.controller("userFormController", function ($scope) {
     };
 
 });
+
 
 
 function generateDisplayedExpenses(){

@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <title>App Dette</title>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <!-- custom scrollbar -->
-    <!--<script src="js/jquery.mCustomScrollbar.min.js"></script>-->
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-filter.min.js"></script>
-    <script src="js/account.js"></script><!-- compte de l'utilisateur -->
-    <script src="js/users.js"></script><!-- les gens enregistrés -->
-    <!--<script src="js/add-user.js"></script>-->
-</head>
-
-<body ng-app="appDette">
-    <header>
-        <h1>App Dette</h1>
-        <div class="logo"></div>
-    </header>
-    
-    <div class="flexbox" ng-controller="usersCtrl" ng-controller="depensesCtrl">
-       
-        <!-- NAVIGATION -->
-        <nav>
+<nav>
             <ul>
                 <a href="#">
                     <li class="add-user" id="myBtn">Ajouter personne<i class="fa fa-user-plus" aria-hidden="true"></i></li>
@@ -66,10 +39,13 @@
                 <script src="js/modalbox.js"></script>
                 
                 <a href="#">
-                    <li class="actif">Tableau de bord<i class="fa fa-bar-chart" aria-hidden="true"></i></li>
+                    <li class="actif">Utilisateurs<i class="fa fa-user" aria-hidden="true"></i></li>
                 </a>
                 <a href="#">
-                    <li class="actif">Gestion groupes<i class="fa fa-users" aria-hidden="true"></i></li>
+                    <li class="actif">Dépenses<i class="fa fa-credit-card-alt" aria-hidden="true"></i></li>
+                </a>
+                <a href="#">
+                    <li class="actif">Groupes<i class="fa fa-users" aria-hidden="true"></i></li>
                 </a>
                 <a href="#">
                     <li class="actif">Déconnexion<i class="fa fa-sign-out" aria-hidden="true"></i></li>
@@ -79,34 +55,3 @@
                 </a>
             </ul>
         </nav>
-        
-        <!-- TABLEAU DE BORD -->
-        <section>
-        
-            <div class="depenses">
-                <div class="depense">
-                   
-                   
-                    <p class="name"><i class="fa fa-exclamation-triangle {{ user.usercolor }}"></i> Payeur</p>
-                    <p class="total-money-down">91 $<i class="fa fa-arrow-up"></i></p>
-                    <p class="label-depense"><b><i class="fa fa-user" aria-hidden="true"></i> Personnes concernées</b>Nom, Nom, Nom <i>-3-</i></p>
-                    
-                    
-                    <p class="label-depense"><b><i class="fa fa-calendar" aria-hidden="true"></i> Date</b>02 Janvier 1991</p>
-                    <p class="label-depense"><b><i class="fa fa-users" aria-hidden="true"></i> Groupe</b>Ete 2016</p>
-                    <p class="label-depense"><b><i class="fa fa-pencil" aria-hidden="true"></i> Description</b>Petit Déjeuner</p>
-                    
-                    
-                </div>
-            </div>
-        
-        </section>
-    </div>
-    
-    <!-- PIED DE PAGE -->
-    <footer>
-        <p><i class="fa fa-copyright" aria-hidden="true"></i>Julien Malle, 2016.</p>
-    </footer>
-</body>
-
-</html>

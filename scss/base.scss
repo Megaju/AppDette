@@ -38,90 +38,9 @@ bold, b {
     font-weight: 700;
 }
 
-/* --- style des bloc des personnes --- */
-.person, .depense {
-    position: relative;
-    padding: 0 20px 40px 20px;
-    margin: 15px;
-    background-color: #ddd;
-    color: #222;
-    border: 1px solid #eee;
-    box-shadow: 0 0 3px #bbb;
-    
-    /* nom du payeur */
-    .name {
-        margin-top: 15px;
-        font-size: $fs-normal+.4;
-        text-transform: capitalize;
-        font-weight: 700;
-    }
-    
-    /* ici mettre les bouttons */
-    @include buttons-dette;
-    
-    .close, .link-person {
-        font-size: $fs-medium;
-    }
-    
-    .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
-    
-    .link-person {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-    }
-    
-    .label-depense {
-        position: relative;
-        padding: 40px 5px 15px 5px;
-        margin: 10px 0;
-        border: 1px solid rgba(255, 255, 255, .5);
-        background-color: rgba(255, 255, 255, .5);
-        
-        b {
-            position: absolute;
-            left: 10px;
-            top: 10px;
-            opacity: .7;
-        }
-    }
-}
-
-/* --- color user --- */
-
-.name {
-    .none {
-        display: none;
-    }
-    
-    .low {
-       color: #008030;
-        text-shadow: 0 0 0 #000;
-    }
-    
-    .moderate {
-       color: #0080d7; 
-        text-shadow: 0 0 0 #000;
-    }
-    
-    .high {
-       color: #fef200;
-        text-shadow: 0 0 0 #000;
-    }
-    
-    .very-high {
-       color: #fb7613;
-        text-shadow: 0 0 0 #000;
-    }
-    
-    .extreme {
-       color: #e40915;
-        text-shadow: 0 0 0 #000;
-    }
+.flexbox {
+    display: flex;
+    justify-content: space-around;
 }
 
 /* --- style des groupes --- */
@@ -133,6 +52,12 @@ bold, b {
     background-color: rgba(255, 255, 255, .5);
     
     @include buttons-dette;
+}
+
+.no-padding {
+    .group {
+        padding: 0;
+    }
 }
 
 .label-grp {

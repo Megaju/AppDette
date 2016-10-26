@@ -1,0 +1,38 @@
+.depense {
+    min-height: 100px;
+    padding: 15px;
+    border-bottom: 1px dashed $complementary;
+    
+    .payeur, .users, .calendar {
+        margin: 15px 0;
+        font-weight: 700;
+        color: $complementary;
+        
+        i:last-child {
+            font-weight: 500;
+            color: $dark;
+        }
+    }
+    
+    .bloc-description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 45px;
+        margin-bottom: 15px;
+        padding: 25px 0;
+        border: 1px solid $complementary;
+        font-style: italic;
+        background-color: rgba(200, 200, 255, .5);
+        
+        .label-description {
+            position: absolute;
+            font-weight: 700;
+            top: 5px;
+            left: 8px;
+            color: $complementary;
+            font-style: normal;
+        }
+    }
+}

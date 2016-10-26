@@ -46,9 +46,17 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* --- bouttons indiquant les sommes du et à percevoir --- */
 /* --- font-size --- */
 /* --- colors --- */
+/* --- bouttons indiquant les sommes du et à percevoir --- */
+@font-face {
+  font-family: 'montserratbold';
+  src: url("../fonts/montserrat-bold-webfont.woff2") format("woff2"), url("../fonts/montserrat-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  font-family: 'montserrabold', sans-serif, monospace; }
+
 body {
   background-color: whitesmoke; }
 
@@ -82,95 +90,9 @@ a {
 bold, b {
   font-weight: 700; }
 
-/* --- style des bloc des personnes --- */
-.person, .depense {
-  position: relative;
-  padding: 0 20px 40px 20px;
-  margin: 15px;
-  background-color: #ddd;
-  color: #222;
-  border: 1px solid #eee;
-  box-shadow: 0 0 3px #bbb;
-  /* nom du payeur */
-  /* ici mettre les bouttons */ }
-  .person .name, .depense .name {
-    margin-top: 15px;
-    font-size: 1.4em;
-    text-transform: capitalize;
-    font-weight: 700; }
-  .person .total-money-up, .person .total-money-down, .depense .total-money-up, .depense .total-money-down {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-    padding: 5px 15px;
-    margin: 20px 0;
-    background-color: whitesmoke;
-    color: whitesmoke;
-    text-align: center;
-    font-weight: 700;
-    transition: .3s;
-    cursor: pointer; }
-    .person .total-money-up:hover, .person .total-money-down:hover, .depense .total-money-up:hover, .depense .total-money-down:hover {
-      bottom: 2px;
-      filter: brightness(110%); }
-    .person .total-money-up i, .person .total-money-down i, .depense .total-money-up i, .depense .total-money-down i {
-      position: absolute;
-      right: 5px;
-      top: 5px; }
-  .person .total-money-up, .depense .total-money-up {
-    margin-left: 5px;
-    background-color: #71C386;
-    border: 1px solid #B4CDBB;
-    border-bottom: 5px solid #B4CDBB;
-    color: #3B433D; }
-  .person .total-money-down, .depense .total-money-down {
-    margin-right: 5px;
-    background-color: #ED7161;
-    border: 1px solid #F0B2AA;
-    border-bottom: 5px solid #F0B2AA;
-    color: #6D514E; }
-  .person .close, .person .link-person, .depense .close, .depense .link-person {
-    font-size: 2em; }
-  .person .close, .depense .close {
-    position: absolute;
-    top: 10px;
-    right: 10px; }
-  .person .link-person, .depense .link-person {
-    position: absolute;
-    bottom: 10px;
-    right: 10px; }
-  .person .label-depense, .depense .label-depense {
-    position: relative;
-    padding: 40px 5px 15px 5px;
-    margin: 10px 0;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.5); }
-    .person .label-depense b, .depense .label-depense b {
-      position: absolute;
-      left: 10px;
-      top: 10px;
-      opacity: .7; }
-
-/* --- color user --- */
-.name .none {
-  display: none; }
-.name .low {
-  color: #008030;
-  text-shadow: 0 0 0 #000; }
-.name .moderate {
-  color: #0080d7;
-  text-shadow: 0 0 0 #000; }
-.name .high {
-  color: #fef200;
-  text-shadow: 0 0 0 #000; }
-.name .very-high {
-  color: #fb7613;
-  text-shadow: 0 0 0 #000; }
-.name .extreme {
-  color: #e40915;
-  text-shadow: 0 0 0 #000; }
+.flexbox {
+  display: flex;
+  justify-content: space-around; }
 
 /* --- style des groupes --- */
 .group {
@@ -212,6 +134,9 @@ bold, b {
     border: 1px solid #F0B2AA;
     border-bottom: 5px solid #F0B2AA;
     color: #6D514E; }
+
+.no-padding .group {
+  padding: 0; }
 
 .label-grp {
   position: absolute;
@@ -338,28 +263,6 @@ bold, b {
       text-decoration: none;
       cursor: pointer; }
 
-.flexbox {
-  display: flex;
-  justify-content: space-around; }
-
-.persons, .depenses {
-  text-align: center; }
-  .persons .name, .depenses .name {
-    text-align: left; }
-
-.person, .depense {
-  display: inline-block;
-  width: 20%; }
-
-.depense {
-  width: 100%; }
-
-.login-back {
-  background-image: url(../images/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center; }
-
 header, footer {
   display: flex;
   justify-content: flex-end;
@@ -391,6 +294,62 @@ h1 {
   margin-left: 25px;
   background-image: url(../svg/home.svg); }
 
+#presentation-appli {
+  padding: 50px 0;
+  background-image: url(../images/escheresque.png); }
+
+.clapclap {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  background-size: cover;
+  background-image: url(../svg/handshake.svg); }
+
+.separator {
+  width: 50%;
+  height: 6px;
+  margin: 50px auto;
+  background-color: #006564; }
+
+#presentation-appli p {
+  width: 50%;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 1em; }
+
+form {
+  width: 50%;
+  margin: 0 auto;
+  /*outline: 1px solid red;*/ }
+  form input {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 0 10px; }
+    form input:focus, form input:active {
+      outline: 0;
+      color: #006564;
+      border: 1px solid #006564; }
+    form input:-webkit-autofill {
+      /* supprimer css preremplie sous chrome */
+      border: 1px solid #222;
+      -webkit-box-shadow: 0 0 0 1000px white inset; }
+  form .submit {
+    border: 0;
+    text-transform: uppercase;
+    padding: 0 25px;
+    background-color: #006564;
+    color: whitesmoke; }
+  form:last-child {
+    justify-content: flex-end; }
+
+header form {
+  position: absolute;
+  left: 10px; }
+  header form input {
+    width: 20%;
+    display: inline; }
+
 nav {
   position: relative;
   width: 20%;
@@ -421,153 +380,122 @@ nav {
   nav i {
     margin-left: 10px; }
 
-@font-face {
-  font-family: 'montserratbold';
-  src: url("../fonts/montserrat-bold-webfont.woff2") format("woff2"), url("../fonts/montserrat-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-body {
-  font-family: 'montserrabold', sans-serif, monospace; }
-
-.form * {
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s; }
-
-form {
-  padding: 20px;
-  width: 50%;
-  max-width: 420px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.5); }
-
-#feedback-page {
+.persons {
   text-align: center; }
+  .persons .name {
+    text-align: left; }
 
-#form-main {
-  width: 100%;
-  float: left;
-  padding-top: 0px; }
+.person {
+  display: inline-block;
+  width: 20%; }
 
-#form-div {
-  background-color: rgba(72, 72, 72, 0.4);
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 35px;
-  padding-bottom: 50px;
-  width: 450px;
-  float: left;
-  left: 50%;
-  position: absolute;
-  margin-top: 30px;
-  margin-left: -260px;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px; }
-
-.feedback-input {
-  color: #302e31;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  border-radius: 0;
-  line-height: 22px;
-  background-color: #fff;
-  padding: 13px 13px 13px 54px;
-  margin-bottom: 10px;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  border: 3px solid transparent; }
-
-.feedback-input:focus {
-  background: #fff;
-  box-shadow: 0;
-  border: 3px solid #006564;
-  color: #006564;
-  outline: none;
-  padding: 13px 13px 13px 54px; }
-
-.focused {
-  color: #006564;
-  border: #006564 solid 3px; }
-
-/* Icons ---------------------------------- */
-#name {
-  background-image: url(../svg/user.svg);
-  background-size: 30px 30px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat; }
-
-#name:focus {
-  background-image: url(../svg/user.svg); }
-
-#pwd {
-  background-image: url(../svg/pwd.svg);
-  background-size: 30px 30px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat; }
-
-#pwd:focus {
-  background-image: url(../svg/pwd.svg); }
-
-textarea {
-  width: 100%;
-  height: 150px;
-  line-height: 150%;
-  resize: vertical; }
-
-input:hover,
-textarea:hover,
-input:focus,
-textarea:focus {
-  background-color: white; }
-
-[class*="submit"] {
+/* --- style des bloc des personnes --- */
+.person {
   position: relative;
-  margin: 5px auto; }
+  padding: 0 20px 40px 20px;
+  margin: 15px;
+  background-color: #ddd;
+  color: #222;
+  border: 1px solid #eee;
+  box-shadow: 0 0 3px #bbb;
+  /* nom du payeur */
+  /* ici mettre les bouttons */ }
+  .person .name {
+    margin-top: 15px;
+    font-size: 1.4em;
+    text-transform: capitalize;
+    font-weight: 700; }
+  .person .total-money-up, .person .total-money-down {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 15px;
+    margin: 20px 0;
+    background-color: whitesmoke;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 700;
+    transition: .3s;
+    cursor: pointer; }
+    .person .total-money-up:hover, .person .total-money-down:hover {
+      bottom: 2px;
+      filter: brightness(110%); }
+    .person .total-money-up i, .person .total-money-down i {
+      position: absolute;
+      right: 5px;
+      top: 5px; }
+  .person .total-money-up {
+    margin-left: 5px;
+    background-color: #71C386;
+    border: 1px solid #B4CDBB;
+    border-bottom: 5px solid #B4CDBB;
+    color: #3B433D; }
+  .person .total-money-down {
+    margin-right: 5px;
+    background-color: #ED7161;
+    border: 1px solid #F0B2AA;
+    border-bottom: 5px solid #F0B2AA;
+    color: #6D514E; }
+  .person .close, .person .link-person {
+    font-size: 2em; }
+  .person .close {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+  .person .link-person {
+    position: absolute;
+    bottom: 10px;
+    right: 10px; }
 
-#button-blue {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  padding: 25px 10px;
-  background-color: #006564;
-  color: white;
-  font-size: 24px;
-  font-weight: 700;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  border: #fff solid 4px;
-  cursor: pointer;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-  z-index: 2; }
+/* --- color user --- */
+.name .none {
+  display: none; }
+.name .low {
+  color: #008030;
+  text-shadow: 0 0 0 #000; }
+.name .moderate {
+  color: #0080d7;
+  text-shadow: 0 0 0 #000; }
+.name .high {
+  color: #fef200;
+  text-shadow: 0 0 0 #000; }
+.name .very-high {
+  color: #fb7613;
+  text-shadow: 0 0 0 #000; }
+.name .extreme {
+  color: #e40915;
+  text-shadow: 0 0 0 #000; }
 
-#button-blue:hover {
-  background-color: transparent;
-  color: #006564; }
-
-.submit:hover {
-  color: #006564; }
-
-.ease {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0px;
-  height: 100%;
-  background-color: #fff;
-  -webkit-transition: .3s ease;
-  -moz-transition: .3s ease;
-  -o-transition: .3s ease;
-  -ms-transition: .3s ease;
-  transition: .3s ease;
-  z-index: 1; }
-
-.submit:hover .ease {
-  width: 100%;
-  background-color: white; }
+.depense {
+  min-height: 100px;
+  padding: 15px;
+  border-bottom: 1px dashed #006564; }
+  .depense .payeur, .depense .users, .depense .calendar {
+    margin: 15px 0;
+    font-weight: 700;
+    color: #006564; }
+    .depense .payeur i:last-child, .depense .users i:last-child, .depense .calendar i:last-child {
+      font-weight: 500;
+      color: #222; }
+  .depense .bloc-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 45px;
+    margin-bottom: 15px;
+    padding: 25px 0;
+    border: 1px solid #006564;
+    font-style: italic;
+    background-color: rgba(200, 200, 255, 0.5); }
+    .depense .bloc-description .label-description {
+      position: absolute;
+      font-weight: 700;
+      top: 5px;
+      left: 8px;
+      color: #006564;
+      font-style: normal; }
 
 /*# sourceMappingURL=style.css.map */
