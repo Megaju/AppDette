@@ -1,8 +1,6 @@
 <nav>
             <ul>
-                <a href="#">
-                    <li class="add-user" id="myBtn">Ajouter personne<i class="fa fa-user-plus" aria-hidden="true"></i></li>
-                </a>
+                <li class="add-user" id="myBtn">Ajouter personne<i class="fa fa-user-plus" aria-hidden="true"></i></li>
                 
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
@@ -38,19 +36,19 @@
                 </div>
                 <script src="js/modalbox.js"></script>
                 
-                <a href="#">
+                <a href="users.php">
                     <li class="actif">Utilisateurs<i class="fa fa-user" aria-hidden="true"></i></li>
                 </a>
-                <a href="#">
+                <a href="depenses.php">
                     <li class="actif">Dépenses<i class="fa fa-credit-card-alt" aria-hidden="true"></i></li>
                 </a>
-                <a href="#">
+                <a href="groups.php">
                     <li class="actif">Groupes<i class="fa fa-users" aria-hidden="true"></i></li>
                 </a>
                 <a href="#">
                     <li class="actif">Déconnexion<i class="fa fa-sign-out" aria-hidden="true"></i></li>
                 </a>
-                <a href="#">
+                <a href="about.php">
                     <li>à propos<i class="fa fa-info-circle" aria-hidden="true"></i></li>
                 </a>
             </ul>
