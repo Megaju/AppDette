@@ -47,15 +47,15 @@
                 
                 <!-- UNE DEPENSE -->
                 <div class="depense" ng-repeat="depense in depenses">   
-                    <p class="payeur"><i class="fa fa-user" aria-hidden="true"></i> Payeur - <i>Nom</i></p>
+                    <p class="payeur"><i class="fa fa-user" aria-hidden="true"></i> Payeur - <i>{{ aUsers[depense.Payeur] }}</i></p>
                     
-                    <p class="users"><i class="fa fa-address-book" aria-hidden="true"></i> Personnes concernées - <i>Concerné1, Concerné2, Concerné3</i></p>
+                    <p class="users"><i class="fa fa-address-book" aria-hidden="true"></i> Personnes concernées - <i>{{ aConcernesFinal[depense.Id] }}</i></p>
                     
-                    <p class="calendar"><i class="fa fa-calendar" aria-hidden="true"></i> Date - <i>01/02/1982</i></p>
+                    <p class="calendar"><i class="fa fa-calendar" aria-hidden="true"></i> Date - <i>{{ depense.Date }}</i></p>
                     
                     <div class="bloc-description">
                         <p class="label-description"><i class="fa fa-pencil" aria-hidden="true"></i> Description</p>
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p class="description">{{ depense.Description }}</p>
                     </div>    
                 </div>
                 

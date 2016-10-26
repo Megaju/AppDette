@@ -50,7 +50,7 @@
                         
                         <!-- affichage du nom -->
                         <!--<p class="name"><i class="fa fa-exclamation-triangle {{ user.usercolor }}"></i> {{aUsers[depense.Concernes]}}</p>-->
-                        <p class="name"><i class="fa fa-exclamation-triangle {{ user.usercolor }}"></i> Nom payeur</p>
+                        <p class="name"><i class="fa fa-exclamation-triangle {{ user.usercolor }}"></i> {{aUsers[depense.Payeur]}}</p>
                         
                         <!-- affichage des montants à donner et à percevoir -->
                         <div class="flexbox">
