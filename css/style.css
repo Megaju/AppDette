@@ -181,7 +181,7 @@ bold, b {
   margin: 50px;
   padding: 50px;
   background-color: rgba(255, 255, 255, 0.5);
-  color: #222; }
+  color: #444; }
   .about .handshake {
     width: 200px;
     height: 200px;
@@ -240,8 +240,8 @@ bold, b {
     color: #006564;
     border: 1px solid #006564; }
     .modal-content input:focus {
-      color: #222;
-      border: 1px solid #222; }
+      color: #444;
+      border: 1px solid #444; }
     .modal-content input:last-child {
       width: 40%;
       height: 50px;
@@ -269,7 +269,7 @@ header, footer {
   align-items: center;
   height: 50px;
   background-color: whitesmoke;
-  color: #222;
+  color: #444;
   padding: 10px; }
 
 footer {
@@ -279,7 +279,7 @@ footer {
   font-size: 0.7em;
   background-image: url(../images/escheresque.png);
   z-index: 100;
-  border-top: 1px solid #222; }
+  border-top: 1px solid #444; }
 
 h1 {
   text-transform: uppercase;
@@ -332,7 +332,7 @@ form {
       border: 1px solid #006564; }
     form input:-webkit-autofill {
       /* supprimer css preremplie sous chrome */
-      border: 1px solid #222;
+      border: 1px solid #444;
       -webkit-box-shadow: 0 0 0 1000px white inset; }
   form .submit {
     border: 0;
@@ -355,7 +355,7 @@ nav {
   width: 20%;
   height: 100vh;
   background-color: whitesmoke;
-  color: #222;
+  color: #444;
   box-shadow: 0 1px 1px #00B2AF;
   z-index: 99; }
   nav li {
@@ -472,13 +472,19 @@ nav {
   min-height: 100px;
   padding: 15px;
   border-bottom: 1px dashed #006564; }
+  .depense:last-child {
+    border-bottom: 0px dashed #006564; }
   .depense .payeur, .depense .users, .depense .calendar, .depense .usd {
     margin: 15px 0;
     font-weight: 700;
     color: #006564; }
     .depense .payeur i:last-child, .depense .users i:last-child, .depense .calendar i:last-child, .depense .usd i:last-child {
       font-weight: 500;
-      color: #222; }
+      color: #444; }
+  .depense .payeur {
+    color: orange; }
+    .depense .payeur i:last-child {
+      font-weight: 700; }
   .depense .bloc-description {
     display: flex;
     justify-content: center;
@@ -497,5 +503,7 @@ nav {
       left: 8px;
       color: #006564;
       font-style: normal; }
+    .depense .bloc-description .description {
+      color: #444; }
 
 /*# sourceMappingURL=style.css.map */

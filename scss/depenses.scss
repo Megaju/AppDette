@@ -3,6 +3,10 @@
     padding: 15px;
     border-bottom: 1px dashed $complementary;
     
+    &:last-child {
+        border-bottom: 0px dashed $complementary;
+    }
+    
     .payeur, .users, .calendar, .usd {
         margin: 15px 0;
         font-weight: 700;
@@ -11,6 +15,14 @@
         i:last-child {
             font-weight: 500;
             color: $dark;
+        }
+    }
+    
+    .payeur {
+        color: $important;
+        
+        i:last-child {
+            font-weight: 700;
         }
     }
     
@@ -33,6 +45,10 @@
             left: 8px;
             color: $complementary;
             font-style: normal;
+        }
+        
+        .description {
+            color: $dark;
         }
     }
 }

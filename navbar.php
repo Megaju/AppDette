@@ -40,7 +40,7 @@
                     <li class="actif">Utilisateurs<i class="fa fa-user" aria-hidden="true"></i></li>
                 </a>
                 <a href="depenses.php">
-                    <li class="actif">Dépenses<i class="fa fa-credit-card-alt" aria-hidden="true"></i></li>
+                    <li class="actif">Dépenses<i class="fa fa-usd" aria-hidden="true"></i></li>
                 </a>
                 <a href="groups.php">
                     <li class="actif">Groupes<i class="fa fa-users" aria-hidden="true"></i></li>
