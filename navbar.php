@@ -7,31 +7,63 @@
                   <!-- Modal content -->
                   <div class="modal-content" ng-controller="userFormController">
                     <span class="close"><i class="fa fa-close"></i></span>
-                    <!-- NAME -->
-                    <i class="fa fa-user"></i>
-                    <input type="text" placeholder="nom" ng-model="user.username">
-                    <!-- PRIORITE -->
-                    <i class="fa fa-exclamation-triangle"></i>
-                    <input type="radio" name="priority" value="none" ng-model="user.usercolor">Pas important</input>
-                    <input type="radio" name="priority" value="low" model="user.usercolor">Peu d'importance</input>
-                    <input type="radio" name="priority" value="moderate" model="user.usercolor">Légèrement important</input>
-                    <input type="radio" name="priority" value="high" model="user.usercolor">Important</input>
-                    <input type="radio" name="priority" value="very-high" model="user.usercolor">Très important</input>
-                    <input type="radio" name="priority" value="extreme" model="user.usercolor">URGENT!</input>
-                    <!-- GROUP -->
-                    <i class="fa fa-users"></i>
-                    <input list="groups" type="text" placeholder="groupe" ng-model="user.usergroup">
-                    <datalist id="groups">
-                        <option value="{{ key }}" ng-repeat="(key, value) in users | groupBy: 'usergroup'">{{ key }}</option>
-                    </datalist>
-                    <!-- SA DETTE -->
-                    <i class="fa fa-arrow-down"></i>
-                    <input type="text" placeholder="argent qu'il doit" ng-model="user.debt">
-                    <!-- TA DETTE -->
-                    <i class="fa fa-arrow-up"></i>
-                    <input type="text" placeholder="argent que tu lui doit" ng-model="user.pickup">
-                    <!-- VALIDER -->
-                    <input type="submit" value="ajouter" ng-click="addUser(user)">
+                    <div class="flexbox">
+                    <div>
+                        <!-- NAME -->
+                        <i class="fa fa-user"></i>
+                        <input type="text" placeholder="nom" ng-model="user.username">
+                        <!-- GROUP -->
+                        <i class="fa fa-users"></i>
+                        <input list="groups" type="text" placeholder="groupe" ng-model="user.usergroup">
+                        <datalist id="groups">
+                            <option value="{{ key }}" ng-repeat="(key, value) in users | groupBy: 'usergroup'">{{ key }}</option>
+                        </datalist>
+                        <!-- SA DETTE -->
+                        <i class="fa fa-arrow-down"></i>
+                        <input type="text" placeholder="argent qu'il doit" ng-model="user.debt">
+                        <!-- TA DETTE -->
+                        <i class="fa fa-arrow-up"></i>
+                        <input type="text" placeholder="argent que tu lui doit" ng-model="user.pickup">
+                        <!-- PRIORITE -->
+                        <p>Importance</p>
+                        <div class="radio">
+                            
+                            <!-- level 0 -->
+                            <span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                <input type="radio" name="priority" value="none" ng-model="user.usercolor"><i class="radio-label">Pas important</i></input>
+                            </span>
+                            
+                            <!-- level 1 -->
+                            <span><i class="fa fa-exclamation-triangle low" aria-hidden="true"></i>
+                                <input type="radio" name="priority" value="low" model="user.usercolor"><i class="radio-label">Peu d'importance</i></input>
+                            </span>
+                            
+                            <!-- level 2 -->
+                            <span><i class="fa fa-exclamation-triangle moderate"  aria-hidden="true"></i>
+                                <input type="radio" name="priority" value="moderate" model="user.usercolor"><i class="radio-label">Légèrement important</i></input>
+                            </span>
+                            
+                            <!-- level 3 -->
+                            <span><i class="fa fa-exclamation-triangle high" aria-hidden="true"></i>
+                                <input type="radio" name="priority" value="high" model="user.usercolor"><i class="radio-label">Important</i></input>
+                            </span>
+                            
+                            <!-- level 4 -->
+                            <span><i class="fa fa-exclamation-triangle very-high" aria-hidden="true"></i>
+                                <input type="radio" name="priority" value="very-high" model="user.usercolor"><i class="radio-label">Très important</i></input>
+                            </span>
+                            
+                            <!-- level 5 -->
+                            <span><i class="fa fa-exclamation-triangle extreme" aria-hidden="true"></i>
+                                <input type="radio" name="priority" value="extreme" model="user.usercolor"><i class="radio-label">URGENT!</i></input>
+                            </span>
+                        </div>
+                        <!-- VALIDER -->
+                        <input type="submit" value="ajouter" ng-click="addUser(user)">
+                    </div>
+                   
+                    
+                    </div><!-- /flexbox -->
                 </div>
                 </div>
                 <script src="js/modalbox.js"></script>

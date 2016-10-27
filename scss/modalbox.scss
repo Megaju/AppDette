@@ -1,0 +1,133 @@
+/* --- modal box --- */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    text-align: center;
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+    background-image: url(../images/escheresque.png);
+    border: 1px solid $complementary;
+    
+    [class*="user"], [class*="arrow"], p {
+        color: $complementary;
+    } 
+    
+    p {
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    
+    input {
+        margin: 10px auto;
+        padding: 0 15px;
+        width: 90%;
+        height: 40px;
+        line-height: 40px;
+        text-transform: capitalize;
+        outline: 0;
+        color: $complementary;
+        border: 1px solid $complementary;
+        
+        &:focus {
+            color: $dark;
+            border: 1px solid $dark;
+        }
+        
+        &:last-child {
+            width: 40%;
+            height: 50px;
+            line-height: 40px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: 2px solid $complementary;
+            font-weight: 700;
+            transition: .4s;
+        }
+    }
+    
+    /* The Close Button */
+    .close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        
+        &:hover, &:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    
+    .radio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*margin-left: 25px;*/
+        
+        input {
+            width: 15px;
+            height: 15px;
+            
+        }
+        
+        .radio-label {
+            display: none;
+        }
+        
+        span {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid $back;
+            padding-right: 10px;
+            
+            &:last-child {
+                border: 0;
+            }
+            
+            .fa {
+                display: block;
+                margin-right: 10px;
+            }
+            
+            &:hover {
+                .radio-label {
+                    display: block;
+                    padding: 10px;
+                    position: absolute;
+                    top: -60px;
+                    background-color: $dark;
+                    color: $back;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    border: 1px solid #656565;
+                }
+            }
+        }
+        
+    }
+}
+
+@include color-importance;

@@ -181,7 +181,7 @@ bold, b {
   margin: 50px;
   padding: 50px;
   background-color: rgba(255, 255, 255, 0.5);
-  color: #444; }
+  color: #334; }
   .about .handshake {
     width: 200px;
     height: 200px;
@@ -191,85 +191,13 @@ bold, b {
   .about h2 {
     font-size: 3em; }
 
-/* --- modal box --- */
-/* The Modal (background) */
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */ }
-
-/* Modal Content/Box */
-.modal-content {
-  text-align: center;
-  position: relative;
-  background-color: #fefefe;
-  margin: 15% auto;
-  /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 30%;
-  /* Could be more or less, depending on screen size */
-  background-image: url(../images/escheresque.png);
-  border: 1px solid #006564;
-  /* The Close Button */ }
-  .modal-content [class*="user"], .modal-content [class*="arrow"] {
-    color: #006564; }
-  .modal-content input {
-    margin: 10px auto;
-    padding: 0 15px;
-    width: 90%;
-    height: 40px;
-    line-height: 40px;
-    text-transform: capitalize;
-    outline: 0;
-    color: #006564;
-    border: 1px solid #006564; }
-    .modal-content input:focus {
-      color: #444;
-      border: 1px solid #444; }
-    .modal-content input:last-child {
-      width: 40%;
-      height: 50px;
-      line-height: 40px;
-      text-transform: uppercase;
-      cursor: pointer;
-      border: 2px solid #006564;
-      font-weight: 700;
-      transition: .4s; }
-  .modal-content .close {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold; }
-    .modal-content .close:hover, .modal-content .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer; }
-
 header, footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 50px;
   background-color: whitesmoke;
-  color: #444;
+  color: #334;
   padding: 10px; }
 
 footer {
@@ -279,7 +207,7 @@ footer {
   font-size: 0.7em;
   background-image: url(../images/escheresque.png);
   z-index: 100;
-  border-top: 1px solid #444; }
+  border-top: 1px solid #334; }
 
 h1 {
   text-transform: uppercase;
@@ -292,7 +220,7 @@ h1 {
   width: 50px;
   height: 50px;
   margin-left: 25px;
-  background-image: url(../svg/home.svg); }
+  background-image: url(../svg/security.svg); }
 
 #presentation-appli {
   padding: 50px 0;
@@ -332,7 +260,7 @@ form {
       border: 1px solid #006564; }
     form input:-webkit-autofill {
       /* supprimer css preremplie sous chrome */
-      border: 1px solid #444;
+      border: 1px solid #334;
       -webkit-box-shadow: 0 0 0 1000px white inset; }
   form .submit {
     border: 0;
@@ -355,7 +283,7 @@ nav {
   width: 20%;
   height: 100vh;
   background-color: whitesmoke;
-  color: #444;
+  color: #334;
   box-shadow: 0 1px 1px #00B2AF;
   z-index: 99; }
   nav li {
@@ -379,6 +307,138 @@ nav {
       background-color: orangered; }
   nav i {
     margin-left: 10px; }
+
+/* --- modal box --- */
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+
+/* Modal Content/Box */
+.modal-content {
+  text-align: center;
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  /* Could be more or less, depending on screen size */
+  background-image: url(../images/escheresque.png);
+  border: 1px solid #006564;
+  /* The Close Button */ }
+  .modal-content [class*="user"], .modal-content [class*="arrow"], .modal-content p {
+    color: #006564; }
+  .modal-content p {
+    margin-bottom: 10px;
+    font-weight: 700; }
+  .modal-content input {
+    margin: 10px auto;
+    padding: 0 15px;
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    text-transform: capitalize;
+    outline: 0;
+    color: #006564;
+    border: 1px solid #006564; }
+    .modal-content input:focus {
+      color: #334;
+      border: 1px solid #334; }
+    .modal-content input:last-child {
+      width: 40%;
+      height: 50px;
+      line-height: 40px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 2px solid #006564;
+      font-weight: 700;
+      transition: .4s; }
+  .modal-content .close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold; }
+    .modal-content .close:hover, .modal-content .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer; }
+  .modal-content .radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*margin-left: 25px;*/ }
+    .modal-content .radio input {
+      width: 15px;
+      height: 15px; }
+    .modal-content .radio .radio-label {
+      display: none; }
+    .modal-content .radio span {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid whitesmoke;
+      padding-right: 10px; }
+      .modal-content .radio span:last-child {
+        border: 0; }
+      .modal-content .radio span .fa {
+        display: block;
+        margin-right: 10px; }
+      .modal-content .radio span:hover .radio-label {
+        display: block;
+        padding: 10px;
+        position: absolute;
+        top: -60px;
+        background-color: #334;
+        color: whitesmoke;
+        cursor: pointer;
+        border-radius: 2px;
+        border: 1px solid #656565; }
+
+/* --- color user --- */
+.none {
+  display: none; }
+
+.low {
+  color: #008030;
+  text-shadow: 0 0 0 #000; }
+
+.moderate {
+  color: #0080d7;
+  text-shadow: 0 0 0 #000; }
+
+.high {
+  color: #fef200;
+  text-shadow: 0 0 0 #000; }
+
+.very-high {
+  color: #fb7613;
+  text-shadow: 0 0 0 #000; }
+
+.extreme {
+  color: #e40915;
+  text-shadow: 0 0 0 #000; }
 
 .persons {
   text-align: center; }
@@ -450,21 +510,26 @@ nav {
     right: 10px; }
 
 /* --- color user --- */
-.name .none {
+.none {
   display: none; }
-.name .low {
+
+.low {
   color: #008030;
   text-shadow: 0 0 0 #000; }
-.name .moderate {
+
+.moderate {
   color: #0080d7;
   text-shadow: 0 0 0 #000; }
-.name .high {
+
+.high {
   color: #fef200;
   text-shadow: 0 0 0 #000; }
-.name .very-high {
+
+.very-high {
   color: #fb7613;
   text-shadow: 0 0 0 #000; }
-.name .extreme {
+
+.extreme {
   color: #e40915;
   text-shadow: 0 0 0 #000; }
 
@@ -480,7 +545,7 @@ nav {
     color: #006564; }
     .depense .payeur i:last-child, .depense .users i:last-child, .depense .calendar i:last-child, .depense .usd i:last-child {
       font-weight: 500;
-      color: #444; }
+      color: #334; }
   .depense .payeur {
     color: orange; }
     .depense .payeur i:last-child {
@@ -504,6 +569,6 @@ nav {
       color: #006564;
       font-style: normal; }
     .depense .bloc-description .description {
-      color: #444; }
+      color: #334; }
 
 /*# sourceMappingURL=style.css.map */

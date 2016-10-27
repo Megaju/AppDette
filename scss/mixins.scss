@@ -43,3 +43,37 @@
         color: $moins-txt;
     }    
 }
+
+@mixin color-importance {
+    /* --- color user --- */
+   
+        .none {
+            display: none;
+        }
+        
+        .low {
+           color: #008030;
+            text-shadow: 0 0 0 #000;
+        }
+        
+        .moderate {
+           color: #0080d7; 
+            text-shadow: 0 0 0 #000;
+        }
+        
+        .high {
+           color: #fef200;
+            text-shadow: 0 0 0 #000;
+        }
+        
+        .very-high {
+           color: #fb7613;
+            text-shadow: 0 0 0 #000;
+        }
+        
+        .extreme {
+           color: #e40915;
+            text-shadow: 0 0 0 #000;
+        }
+    
+}

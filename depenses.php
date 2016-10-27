@@ -46,7 +46,7 @@
                 </select>
                 
                 <!-- UNE DEPENSE -->
-                <div class="depense" ng-repeat="depense in depenses">   
+                <div class="depense" ng-repeat="depense in depenses | filter:usergroup">  
                     <p class="payeur"><i class="fa fa-user" aria-hidden="true"></i> Payeur - <i>{{ aUsers[depense.Payeur] }}</i></p>
                     
                     <p class="users"><i class="fa fa-address-book" aria-hidden="true"></i> Personnes concernées - <i>{{ aConcernesFinal[depense.Id] }}</i></p>
