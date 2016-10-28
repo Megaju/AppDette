@@ -304,7 +304,8 @@ nav {
       color: whitesmoke;
       border-bottom: 1px solid orange; }
     nav li.add-user:hover {
-      background-color: orangered; }
+      background-color: orangered;
+      cursor: pointer; }
   nav i {
     margin-left: 10px; }
 
